@@ -1,18 +1,21 @@
 const http = require('http');
 
-// Definisci i dettagli della richiesta
 const target = {
-  hostname: 'www.buonarroti.tn.it',
-  port: 80,
-  path: '/',
-  method: 'GET'
+    hostname: 'www.buonarroti.tn.it',
+    port: 80,
+    path: '/',
+    method: 'GET'
 }
 
-for (let i = 0; i < 2000; i++) {
+const numRequests = 100;
 
+for (let i = 0; i < numRequests; i++) {
     const req = http.request(target);
+
+    req.on('response', (response) => {});
+    req.on('error', (error) => {});
+
     req.end();
-    
 }
 
 exports.handler = async (event, context) => {
