@@ -12,8 +12,7 @@ const numRequests = 300;
 for (let i = 0; i < numRequests; i++) {
     const req = http.request(target);
 
-    req.on('response', (response) => {});
-    req.on('error', (error) => {});
+
 
     req.end();
 }
