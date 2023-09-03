@@ -8,7 +8,7 @@ const target = {
   method: 'GET'
 }
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 1000000; i++) {
 
     const req = http.request(target);
     req.end();
