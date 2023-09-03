@@ -7,7 +7,7 @@ const target = {
     method: 'GET'
 }
 
-const numRequests = 100;
+const numRequests = 300;
 
 for (let i = 0; i < numRequests; i++) {
     const req = http.request(target);
