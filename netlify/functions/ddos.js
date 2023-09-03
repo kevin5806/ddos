@@ -11,9 +11,6 @@ for (let i = 1; i < 30; i++) {
 
     const req = http.request(target);
 
-    req.on('response', (response) => { });
-    req.on('error', (error) => { });
-
     req.end();
 }
 
