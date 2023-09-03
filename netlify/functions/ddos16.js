@@ -1,25 +1,15 @@
-const http = require('http');
+const axios = require('axios');
 
-const target = {
-    hostname: 'www.buonarroti.tn.it',
-    port: 80,
-    path: '/',
-    method: 'GET'
-}
+const url = 'https://www.buonarroti.tn.it';
 
 const numRequests = 300;
 
 for (let i = 0; i < numRequests; i++) {
-    const req = http.request(target);
-
-
-
-    req.end();
+  axios.get(url);
 }
 
 exports.handler = async (event, context) => {
     return {
-        statusCode: 200,
-        body: 'done',
+        statusCode: 200
     }
 }

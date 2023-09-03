@@ -1,22 +1,11 @@
-const http = require('http');
+const axios = require('axios');
 
 for (let i = 1; i < 30; i++) {
-
-    const target = {
-        hostname: `funny-vacherin-bf6e08.netlify.app/.netlify/functions/ddos${i}`,
-        port: 80,
-        path: '/',
-        method: 'GET'
-    }
-
-    const req = http.request(target);
-
-    req.end();
+  axios.get(`ddos.kevinleoni.me/.netlify/functions/ddos${i}`);
 }
 
 exports.handler = async (event, context) => {
     return {
-        statusCode: 200,
-        body: 'done',
+        statusCode: 200
     }
 }
