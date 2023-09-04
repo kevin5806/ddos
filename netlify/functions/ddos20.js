@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const url = 'https://www.buonarroti.tn.it';
+const url = 'http://188.216.193.238';
 
 const numRequests = 300;
 
